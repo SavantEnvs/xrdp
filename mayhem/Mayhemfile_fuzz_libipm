@@ -1,0 +1,9 @@
+project: savantenvs/xrdp
+target: fuzz_libipm
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_libipm/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_libipm
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_libipm/fuzz_libipm.dict

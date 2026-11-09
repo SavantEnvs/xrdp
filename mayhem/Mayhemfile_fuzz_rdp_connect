@@ -1,0 +1,9 @@
+project: savantenvs/xrdp
+target: fuzz_rdp_connect
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_rdp_connect/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rdp_connect
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_rdp_connect/fuzz_rdp_connect.dict

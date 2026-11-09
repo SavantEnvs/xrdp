@@ -1,0 +1,9 @@
+project: savantenvs/xrdp
+target: fuzz_dechunker
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_dechunker/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dechunker
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_dechunker/fuzz_dechunker.dict

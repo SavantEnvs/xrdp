@@ -1,0 +1,8 @@
+# kind byte (low bits: FIRST=1, LAST=2) and the dynamic-channel mode byte
+vc_mode="\x00"
+dyn_mode="\x01"
+first="\x01"
+last="\x02"
+first_last="\x03"
+chunk_1600="\x40\x06"
+total_1590="\x36\x06"
